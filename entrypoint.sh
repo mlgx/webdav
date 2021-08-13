@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Without this script the mounted volume's ownership is modified when starting the container.
+# The volume becomes owned by the container's default user, which might not exist on the host.
+# This can cause issues if the source directory is used by other services or containers.
+# With this approach there is no need to manually give the uid and gid to docker run.
+
 # Get media folder ownership info (user and group IDs).
 owner_uid=$(stat -c '%u' /webdav)
 owner_gid=$(stat -c '%g' /webdav)
