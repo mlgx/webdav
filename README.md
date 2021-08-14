@@ -3,8 +3,8 @@
 Dockerized WebDAV server.  
 Docker Hub: https://hub.docker.com/r/mlgx/webdav
 
-No user and password are required to connect to the WebDAV server.
-If the app used to connect requires entering a user and password, simply enter some garbage.
+No user and password are required to connect to the WebDAV server.  
+If a client forces you to enter a user and password just smash random keys.
 
 ## Example docker run
 
